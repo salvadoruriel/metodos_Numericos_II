@@ -1,4 +1,4 @@
-#Solucion de Ecuaciones No lineales
+# Solucion de Ecuaciones No lineales
 
 Programas correspondientes a este tema:
 1. Metodo del punto fijo
