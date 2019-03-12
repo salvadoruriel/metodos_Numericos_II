@@ -225,8 +225,23 @@ namespace salvador{
 		            }
 	       		 }
 		return *this;}
-		Matriz::replace_Mat(std::nan(""));
-	return *this;} /*function doesnt exist*/
+		Matriz::replace_Mat(std::nan("")); /*function doesnt exist*/
+	return *this;}
+
+	//*
+    Matriz Matriz::IngresaMatriz(){
+        std::cout << std::endl;
+        for(int i =0; i<ren; i++) {
+            for(int j=0; j<col; j++) {
+                std::cout <<"Ingrese el valor de la matriz en ["
+                            << i+1 <<"]["<< j+1 <<"]: ";
+                std::cin >> mat[i][j];
+                std::cin.get(); //para deshacernos del enter.
+            }
+        }
+        std::cout << std::endl;
+    return *this;}
+    //*/ /* \WARNING :non-standard, works only on CONSOLE. */
 
     Matriz Matriz::mpow(Matriz a,int x){
         if(x <= 1) return a;

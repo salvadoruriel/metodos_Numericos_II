@@ -8,6 +8,8 @@ namespace salvador{
 
     static constexpr double MAT_TOL_EPSILON{0.0000001}; /* Tolerancia para doubles,
                                         0.0000001 como valor esperado en uso academico comun*/
+    static const double C_Euler = std::exp(1.0); /*safer than using a macro M_E*/
+
     static bool nearly_Equal(const double &left, const double &right){
         return (std::fabs(left - right)
                 <= MAT_TOL_EPSILON * std::max(1.0,std::max(std::fabs(left), std::fabs(right)) )  );
@@ -24,6 +26,7 @@ namespace salvador{
 
 		public:/*sobrecarga de operadores al final*/
 			Matriz(int oren,int ocol);
+			Matriz(int oren,int ocol,double oval);
 			Matriz(const Matriz &A,int minren, int mincol); /*Matriz reducida en minren y mincol*/
 			Matriz(const Matriz &A);
 			~Matriz();
@@ -50,6 +53,9 @@ namespace salvador{
 			int replace_Mat(double data[],size_t datasize); /*to change it with a vector of values*/
 			Matriz replace_Mat(double data);/*replace all slots with data, sirven para clases anonimas*/
 			Matriz replace_Mat(std::string type);/*matrices especiales*/
+			//*
+            Matriz IngresaMatriz();
+            //*/ /* \WARNING :non-standard, works only on CONSOLE. */
 			Matriz mpow(Matriz a,int x); /*TODO: use double exp.*/
 			int change_val(int ren_buscado,int col_buscada,double nuevo_val);
 			void determinante_Mat();
