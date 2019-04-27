@@ -705,7 +705,7 @@ namespace salvador{
                 vec_w.change_val(i,0, (transfHol.get_val(i,col_actual) )/(2*tH_r) );
             }
             Matriz th_P(  (Matriz(stop,stop).replace_Mat("I")) - (2.0*( vec_w*(vec_w.transpuesta()) ) ) );
-            //*
+            /*
             std::cout << "Hi" << std::endl << transfHol << std::endl
                         << std::endl << vec_w << std::endl << vec_w.transpuesta()
                         << std::endl << vec_w*vec_w.transpuesta()
@@ -769,7 +769,7 @@ namespace salvador{
 
             vals_Q.change_val(big_row,big_col, sentheta);
             vals_Q.change_val(big_col,big_row, -1*sentheta);/*creamos la matriz Q*/
-            //*
+            /*
             std::cout << std::endl<<"Hi" << std::endl << big_row << " " <<big_col << std::endl
                         << std::endl << vals_Q << std::endl << vals_Q.transpuesta()
                         << std::endl << (vals_Q.transpuesta())*vals_QR
