@@ -36,7 +36,7 @@ namespace salvador{
      * \param mincol la columna a excluir
      * \note use -1 to avoid excluding any row or col
      *
-     * \WARNING avoid vectores, they will make empty memory
+     * \WARNING avoid vectors, they will make empty memory
      */
     Matriz::Matriz(const Matriz &A,int minren, int mincol){
         if(minren >= 0) ren = (A.get_renglones() -1 > 0 ? A.get_renglones()-1 : 0);
