@@ -649,7 +649,8 @@ namespace salvador{
 	    Matriz mens(this->ren,this->col);
 		for(int i=0; i< ren; i++){
 			for(int j=0; j< col; j++){
-                /*
+                //*
+                std::cout << "hi";
                 std::cout << std::endl << Matriz(*this,i,j) << Matriz(*this,i,j).get_det() << std::endl;
                 /*/ /*!< DEBUGGING */
                 mens.change_val(i,j, Matriz(*this,i,j).get_det() );
@@ -671,9 +672,9 @@ namespace salvador{
 	Matriz Matriz::adjunta() const{
 	    return (  ( (*this).cofactores() ).transpuesta()   ); }
     Matriz Matriz::inversa() const{
-        /*
-        std::cout << (*this) << std::endl
-                <<(*this).menores() << std::endl
+        //*
+        std::cout <<(*this) << std::endl
+                << (*this).menores() << std::endl
                 <<(*this).cofactores() << std::endl
                 << ((*this).cofactores()).transpuesta() << std::endl
                 << (*this).adjunta() << std::endl
